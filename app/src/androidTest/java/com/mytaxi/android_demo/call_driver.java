@@ -41,8 +41,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 
 @RunWith(AndroidJUnit4.class)
-//@LargeTest
-
 
 public class call_driver {
 
@@ -58,7 +56,7 @@ public class call_driver {
     private String correct_password = "venture";
 
     @Before
-    public void registerIdlingResourceAndSetActivity() {
+    public void set_up_and_registy_idling() {
         mActivity = mActivityRule.getActivity();
         IdlingRegistry.getInstance().register(EspressoIdlingResource.getIdlingResource());
     }
@@ -111,7 +109,7 @@ public class call_driver {
     }
 
     @After
-    public void end_of_main_test() {
+    public void test_end_and_registy_idling() {
 
         IdlingRegistry.getInstance().unregister(EspressoIdlingResource.getIdlingResource());
     }
