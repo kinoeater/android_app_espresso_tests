@@ -25,6 +25,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0-alpha03'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     implementation 'com.google.dagger:dagger:2.16'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
@@ -45,6 +47,7 @@ dependencies {
 
 
 
-}
 
+
+}
 
