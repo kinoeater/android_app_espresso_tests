@@ -74,10 +74,13 @@ public class call_driver {
                     closeSoftKeyboard());
             onView(withId(R.id.btn_login)).perform(click());
 
+            // verify if the login is successful
             onView(withText("mytaxi demo"))
                     .check(matches(isDisplayed()));
 
         } catch (NoMatchingViewException e) {
+
+            // catches the exp if the client is already logged in, alternatively if condition could be used
 
             Log.d("Skipping", "No login test performed! as it is already logged in");
         }
