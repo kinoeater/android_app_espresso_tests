@@ -13,8 +13,8 @@ jobs:
     - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
     - run:
-      name: sdk manager accept
-      command: echo “Y” | /opt/android/sdk/tools/bin/sdkmanager “build-tools;28”
+        name: sdk manager accept
+        command: echo “Y” | /opt/android/sdk/tools/bin/sdkmanager “build-tools;28”
 
     - run:
         name: chmod permissions
@@ -29,7 +29,7 @@ jobs:
 #    - run:
 #         name: Accept Licences
 #        command: sdkmanager --update && yes | sdkmanager --licenses
-    
+
     - run:
         name: Setup emulator
         command: sdkmanager "system-images;android-28;default;armeabi-v7a" && echo "no" | avdmanager create avd -n test -k "system-images;android-28;default;armeabi-v7a"
